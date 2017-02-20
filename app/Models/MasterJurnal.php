@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Masterjurnal extends Model
 {
+
     use SoftDeletes;
 
   protected $table = 'master-jurnal';
