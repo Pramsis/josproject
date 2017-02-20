@@ -28,6 +28,9 @@ class SessionController extends Controller
       elseif ( Auth::guard('guru')->attempt(request(['nama', 'password']))) {
         return redirect('home');
       }
+      elseif ( Auth::guard('administrator')->attempt(request(['nama', 'password']))) {
+        return redirect('home');
+      }
         dd('passwordsalah');
 
     }

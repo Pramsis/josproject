@@ -46,14 +46,16 @@ return [
             'provider' => 'users',
 
         ],
+
         'guru' => [
             'driver' => 'session',
             'provider' => 'guru',
 
         ],
-        'guruapi' => [
-            'driver' => 'token',
-            'provider' => 'guru',
+
+        'administrator' => [
+            'driver' => 'session',
+            'provider' => 'admin'
 
         ],
 
@@ -88,6 +90,10 @@ return [
             'model' => App\Models\Masterguru::class,
         ],
 
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
