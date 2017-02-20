@@ -47,13 +47,14 @@ Create Data On Journal X RPL 1
 
 <?php $no=1; ?>
 
-@foreach($Masterjurnals as $Masterjurnal)
-  <tr>
-    <td>{{ $no++ }}</td>
-    <td>{{ $Masterjurnal->date }}</td>
-    <td>{{ $Masterjurnal->kelas}}</td>
-    <td>{{ $Masterjurnal->todo }}</td>
-    <td>{{ $Masterjurnal->nama_guru }}</td>
-  <tr>
-@endforeach
+  @foreach($Masterjurnals as $Masterjurnal)
+    <tr>
+      <td>{{ $no++ }}</td>
+      <td>{{ $Masterjurnal->date }}</td>
+      <td>{{ $Masterjurnal->kelas}}</td>
+      <td>{{ $Masterjurnal->todo }}</td>
+      <td>{{ $Masterjurnal->nama_guru }}</td>
+    <tr>
+  @endforeach
+
 @endsection
