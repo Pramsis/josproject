@@ -19,6 +19,7 @@ class Admin extends Migration
             $table->string('nama', '25');
             $table->string('alamat', '50');
             $table->string('telepon', '25');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

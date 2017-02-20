@@ -63,7 +63,6 @@ class GuruController extends Controller
   public function editguru($id)
   {
     $Masterguru = Masterguru::find($id);
-
     return view('jos/guru/editguru', ['Masterguru' => $Masterguru]);
   }
 

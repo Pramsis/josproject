@@ -54,5 +54,14 @@ Route::delete('/manage/update-head/{id}', 'GuruController@destroy')->name('teach
 Route::get('/manage/update-head/{id}', 'GuruController@show');
 Route::get('/manage/update-head/{id}/editguru', 'GuruController@editguru')->name('editguru');
 Route::put('/manage/update-head/{id}', 'GuruController@update')->name('teacher.update');
+//Route Of Admin
+Route::get('/manage/admin', 'AdminController@index')->name('Admin');
+Route::get('/manage/admin', 'AdminController@index')->name('Admin');
+Route::get('/manage/admin', 'AdminController@index')->name('Admin');
+Route::post('/manage/admin', 'AdminController@store');
+Route::delete('/manage/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
+Route::get('/manage/admin/{id}', 'AdminController@show');
+Route::get('/manage/admin/{id}/editadmin', 'AdminController@editadmin')->name('editadmin');
+Route::put('/manage/admin/{id}', 'AdminController@update')->name('admin.update');
 
 Auth::routes();

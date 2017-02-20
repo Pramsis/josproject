@@ -19,7 +19,6 @@
               <li @yield('recap')><a href="#">Recap</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Class</a></li>
               <li @yield('about')><a href="{{ route('about') }}">About</a></li>
-              <li @yield('manage')><a href="{{ route('manage') }}">Management Data</a></li>
               <li><a href="/logoutjos">Log Out</a></li>
               @elseif( Auth::guard('guru')->user())
               <li @yield('recap')><a href="#">Recap</a></li>
