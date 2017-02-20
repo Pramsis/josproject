@@ -1,0 +1,172 @@
+body
+{
+    margin:0;
+    padding: 0;
+    background: url("images/forest-patrol-flat-wallpaper-background.jpg");
+    background-attachment: fixed;
+    background-size:100% 100%;
+}
+
+.navbar
+{
+    background: rgb(255,255,255);
+
+}
+/* Table Border */
+
+.border
+{
+  border-radius:5px;
+}
+
+.table{
+  margin-top: 90px;
+  background: #fff;
+}
+/* ----- */
+
+center
+{
+    margin-top: 65px;
+}
+
+
+.jumbotron
+{
+    margin-top: 30px;
+    background: rgba(255,255,255,0.70);
+}
+
+.container .form-inline
+{
+  margin-top:8px;
+
+}
+
+/*Glyphcon*/
+
+.love
+{
+    color: red;
+}
+
+/*-------------*/
+
+/*button edit data*/
+
+.btn-update
+{
+  margin-top: 20px;
+}
+
+/*---------*/
+
+.form-inline
+{
+  margin: 10px;
+}
+
+.update
+{
+  margin-top:7px;
+}
+
+.thumbnail
+{
+  margin-top: 35px;
+  margin-bottom:60px;
+}
+
+.text
+{
+  text-align: justify;
+}
+
+.text-home
+{
+  color: #fff;
+  margin-bottom:100px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text
+{
+  margin-bottom: 20px;
+}
+
+
+.primer
+{
+  margin-top: 30px;
+}
+
+/* Slider */
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+
+/* Footer */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: ;
+}
+.footer {
+  position: absolute;
+  margin-top: 100px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+
+  background-color: #f5f5f5;
+
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+
+code {
+  font-size: 80%;
+}
