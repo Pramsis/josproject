@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command(DB::table('master-jurnal')->delete())->everyMinute();
+         $schedule->command(DB::table('master-jurnal')->delete())->daily();
     }
 
     /**

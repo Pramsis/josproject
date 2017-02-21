@@ -18,19 +18,35 @@ class RekapController extends Controller
 
     public function rekapAbsenXrpl1()
     {
-        $Masterjurnals = Masterjurnal::all()->where('kelas', 'like', 'X RPL 1');
-        return view('jos/rekap/rekap-absen/rekap-absen-xrpl1', ['Masterjurnals' => $Masterjurnals]);
+
+        dd('absen-xrpl1');
     }
 
     public function rekapAbsenXirpl1()
     {
-        $Masterjurnals = Masterjurnal::all()->where('kelas', 'like', 'XI RPL 1');
-        return view('jos/rekap/rekap-absen/rekap-absen-xirpl1', ['Masterjurnals' => $Masterjurnals]);
+        dd('absen-xirpl1');
     }
-
     public function rekapAbsenXiirpl1()
     {
-        $Masterjurnals = Masterjurnal::all()->where('kelas', 'like', 'XII RPL 1');
-        return view('jos/rekap/rekap-absen/rekap-absen-xiirpl1', ['Masterjurnals' => $Masterjurnals]);
+        dd('absen-xiirpl1');
+    }
+
+    public function rekapJurnalXrpl1()
+    {
+
+        $Masterjurnals = Masterjurnal::withTrashed()->get()->where('kelas', 'like', 'X RPL 1');
+        return view('jos/rekap/rekap-Jurnal/rekap-jurnal-xrpl1', ['Masterjurnals' => $Masterjurnals]);
+    }
+
+    public function rekapJurnalXirpl1()
+    {
+        $Masterjurnals = Masterjurnal::withTrashed()->get()->where('kelas', 'like', 'XI RPL 1');
+        return view('jos/rekap/rekap-Jurnal/rekap-jurnal-xirpl1', ['Masterjurnals' => $Masterjurnals]);
+    }
+
+    public function rekapJurnalXiirpl1()
+    {
+        $Masterjurnals = Masterjurnal::withTrashed()->get()->where('kelas', 'like', 'XII RPL 1');
+        return view('jos/rekap/rekap-Jurnal/rekap-jurnal-xiirpl1', ['Masterjurnals' => $Masterjurnals]);
     }
 }

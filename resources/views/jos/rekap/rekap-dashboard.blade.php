@@ -20,7 +20,7 @@ class="active"
           <h5 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
              Ut enim ad minim veniam</h5>
           <a href="{{ route('rekapAbsenXrpl1') }}"><h4 class="text-center">Absen</h4></a>
-          <a href="{{ route('manage.xirpl1') }}"><h4 class="text-center">Jurnal</h4></a>
+          <a href="{{ route('rekapJurnalXrpl1') }}"><h4 class="text-center">Jurnal</h4></a>
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ class="active"
           <h1>XI RPL 1</h1>
           <h5 class="text">Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h5>
           <a href="{{ route('rekapAbsenXirpl1') }}"><h4 class="text-center">Absen</h4></a>
-          <a href="{{ route('manage.xirpl1') }}"><h4 class="text-center">Jurnal</h4></a>
+          <a href="{{ route('rekapJurnalXirpl1') }}"><h4 class="text-center">Jurnal</h4></a>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ class="active"
           <h1>XII RPL 1</h1>
           <h5 class="text">Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h5>
           <a href="{{ route('rekapAbsenXiirpl1') }}"><h4 class="text-center">Absen</h4></a>
-          <a href="{{ route('manage.xirpl1') }}"><h4 class="text-center">Jurnal</h4></a>
+          <a href="{{ route('rekapJurnalXiirpl1') }}"><h4 class="text-center">Jurnal</h4></a>
         </div>
       </div>
     </div>

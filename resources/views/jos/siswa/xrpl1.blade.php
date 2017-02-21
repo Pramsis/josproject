@@ -24,17 +24,17 @@ class="active"
 
 <?php $no=1; ?>
 
-  @foreach($Mastersiswas as $Mastersiswa)
+  @foreach($Mastersiswas as $key => $value)
   <tr>
     <td>{{ $no++ }}</td>
-    <td>{{ $Mastersiswa->nisn }}</td>
-    <td>{{ $Mastersiswa->nama }}</td>
-    <td>{{ $Mastersiswa->jen_kel }}</td>
-    <td>{{ $Mastersiswa->kelas }}</td>
-    <td>{{ $Mastersiswa->tanggal_lahir }}</td>
-    <td>{{ $Mastersiswa->alamat }}</td>
-    <td>{{ $Mastersiswa->telepon }}</td>
-    <td>{{ $Mastersiswa->agama }}</td>
+    <td>{{ $value->nisn }}</td>
+    <td>{{ $value->nama }}</td>
+    <td>{{ $value->jen_kel }}</td>
+    <td>{{ $value->kelas }}</td>
+    <td>{{ $value->tanggal_lahir }}</td>
+    <td>{{ $value->alamat }}</td>
+    <td>{{ $value->telepon }}</td>
+    <td>{{ $value->agama }}</td>
   <tr>
   @endforeach
 

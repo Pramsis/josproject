@@ -23,6 +23,9 @@ Route::get('/rekap', 'RekapController@index')->name('rekap');
 Route::get('/rekap/absen-xrpl1', 'RekapController@rekapAbsenXrpl1')->name('rekapAbsenXrpl1');
 Route::get('/rekap/absen-xirpl1', 'RekapController@rekapAbsenXirpl1')->name('rekapAbsenXirpl1');
 Route::get('/rekap/absen-xiirpl1', 'RekapController@rekapAbsenXiirpl1')->name('rekapAbsenXiirpl1');
+Route::get('/rekap/jurnal-xrpl1', 'RekapController@rekapJurnalXrpl1')->name('rekapJurnalXrpl1');
+Route::get('/rekap/jurnal-xirpl1', 'RekapController@rekapJurnalXirpl1')->name('rekapJurnalXirpl1');
+Route::get('/rekap/jurnal-xiirpl1', 'RekapController@rekapJurnalXiirpl1')->name('rekapJurnalXiirpl1');
 // --------------------------
 
 //Route OF Login

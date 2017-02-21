@@ -47,7 +47,7 @@ Create Data On Table Head Of Departement
   @if( $errors->has('mapel'))
    <p> {{ $errors->first('mapel') }}</p>
  @endif
- <input type="text" name="level" class="form-control update" value="Guru">
+ <input type="hidden" name="level" class="form-control update" value="Guru">
  @if( $errors->has('level'))
   <p> {{ $errors->first('level') }}</p>
 @endif

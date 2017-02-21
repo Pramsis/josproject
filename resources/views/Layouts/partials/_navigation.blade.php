@@ -15,22 +15,22 @@
           </div>
            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-              @if( Auth::guard('web')->user())
+              @if( Auth::guard('web')->user() )
               <li @yield('recap')><a href="{{ route('rekap') }}">Recap</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Class</a></li>
               <li @yield('about')><a href="{{ route('about') }}">About</a></li>
               <li><a href="/logoutjos">Log Out</a></li>
-              @elseif( Auth::guard('guru')->user())
+              @elseif( Auth::guard('guru')->user() )
               <li @yield('recap')><a href="{{ route('rekap') }}">Recap</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Class</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Everyday Journal</a></li>
               <li @yield('about')><a href="{{ route('about') }}">About</a></li>
               <li><a href="/logoutjos">Log Out</a></li>
-              @elseif( Auth::guard('administrator')->user())
+              @elseif( Auth::guard('administrator')->user() )
               <li @yield('recap')><a href="{{ route('rekap') }}">Recap</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Class</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Everyday Journal</a></li>
-              <li @yield('jurnal')><a href="{{ route('manage') }}">Management Data</a></li>
+              <li @yield('manage')><a href="{{ route('manage') }}">Management Data</a></li>
               <li @yield('about')><a href="{{ route('about') }}">About</a></li>
               <li><a href="/logoutjos">Logout</a></li>
               @endif

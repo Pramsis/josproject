@@ -59,7 +59,7 @@ Create Data On Table XI RPL 1
   @if( $errors->has('agama'))
    <p> {{ $errors->first('agama') }}</p>
   @endif
-  <input type="text" name="level" class="form-control update" maxlength="10" value="Siswa">
+  <input type="hidden" name="level" class="form-control update" maxlength="10" value="Siswa">
   @if( $errors->has('level'))
    <p> {{ $errors->first('level') }}</p>
 @endif

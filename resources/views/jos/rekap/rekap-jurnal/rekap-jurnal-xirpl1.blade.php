@@ -1,7 +1,7 @@
 @extends('Layouts.t_kelas')
 
 @section('title')
-Rekap X RPL 1
+Rekap XI RPL 1
 @endsection
 
 @section('recap')
