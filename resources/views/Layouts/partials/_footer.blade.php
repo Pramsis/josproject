@@ -1,5 +1,13 @@
-<footer class="footer">
-      <div class="container">
-        <h4 class="text-muted">&copy; Jurnal Online Sekolah 2017</h4>
-      </div>
+<footer class="text-center">
+      <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a><br><br>
+        <h1>&copy; Jurnal Online Sekolah 2017</h1>
 </footer>
+
+<script>
+    $(document).ready(function(){
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>

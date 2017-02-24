@@ -59,7 +59,7 @@ class="active"
 
 @section('content')
 <div class="container text-justify">
-  <hr>
+  <hr class="horizontal">
   <h1 class="text-center">Deskripsi Singkat</h1>
   <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -84,7 +84,7 @@ class="active"
 
 @section('content2')
 <div class="container text-center">
-  <hr>
+  <hr class="horizontal">
   <h1 class="text-opinion">Pendapat Dari Siswa</h1>
   <div class="row">
     <div class="col-sm-4">
@@ -114,8 +114,8 @@ class="active"
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <hr>
-      <h1 class="text-center">Lihat Siapa Saja Yang Datang Hari Ini</h1>
+      <hr class="horizontal">
+      <h1 class="text-center text-table">Lihat Siapa Saja Yang Datang Hari Ini</h1>
     </div>
   </div>
 </div>
@@ -125,15 +125,15 @@ class="active"
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-hover table-home">
-        <tr>
-          <th>#</th>
-          <th>NISN</th>
-          <th>Nama</th>
-          <th>Kelas</th>
-          <th>Status</th>
-          <th>Datang Pada</th>
-        </tr>
+      <table class="table table-hover table-home text-center">
+        <thead>
+          <th class="text-center">#</th>
+          <th class="text-center">NISN</th>
+          <th class="text-center">Nama</th>
+          <th class="text-center">Kelas</th>
+          <th class="text-center">Status</th>
+          <th class="text-center">Datang Pada</th>
+        </thead>
 
         <?php $no=1; ?>
 

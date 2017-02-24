@@ -13,7 +13,7 @@
 
 
   </head>
-  <body onload="startTime()">
+  <body onload="startTime()" id="myPage">
 
 
 

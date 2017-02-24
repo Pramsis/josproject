@@ -13,7 +13,7 @@
 
 
   </head>
-  <body onload="tanggal()">
+  <body onload="tanggal()" id="myPage">
 
     @include('Layouts.partials._navigation')
 

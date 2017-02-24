@@ -13,7 +13,7 @@
 
 
   </head>
-  <body>
+  <body id="myPage">
 
     @include('Layouts.partials._navigation')
 
