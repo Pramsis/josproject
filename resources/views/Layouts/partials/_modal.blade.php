@@ -23,11 +23,6 @@
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-primary btn-lg button-modal primer" data-toggle="modal" data-target="#myModal">
-  @yield('button')
-</button>
-
-
     </div>
     <div class="col-md-1"></div>
   </div>

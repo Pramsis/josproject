@@ -17,10 +17,11 @@
 
     @include('Layouts.partials._navigation')
 
-    @include('Layouts.partials._table')
-
+    @yield('slider')
 
     @yield('content')
+
+    @include('Layouts.partials._table')
 
     @include('layouts.partials._footer')
 

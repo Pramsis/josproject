@@ -2,7 +2,7 @@
 
 <div class="header">
   <div class="row">
-   <nav class="navbar navbar-default navbar-fixed-top">
+   <nav class="navbar navbar-default navbar-fixed-top navbar-color">
       <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -11,7 +11,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-              <a class="navbar-brand" href="{{ route('home') }}">Jurnal Online Sekolah</a>
+              <a class="navbar-brand" href="{{ route('home') }}"><p class="navbar-textcolor">Jurnal Online Sekolah</p></a>
           </div>
            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
@@ -24,6 +24,7 @@
               <li @yield('recap')><a href="{{ route('rekap') }}">Recap</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Class</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Everyday Journal</a></li>
+              <li @yield('manage')><a href="{{ route('manage') }}">Management Data</a></li>
               <li @yield('about')><a href="{{ route('about') }}">About</a></li>
               <li><a href="/logoutjos">Log Out</a></li>
               @elseif( Auth::guard('administrator')->user() )

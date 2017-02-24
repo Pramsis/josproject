@@ -9,12 +9,17 @@ class Absen extends Model
 {
     use SoftDeletes;
 
-  protected $table = 'absen';
-  protected $primaryKey = 'id_absen';
-  protected $fillable = [
+    public function Mastersiswa()
+    {
+        return $this->hasOne('App\Models\Mastersiswa', 'id_siswa');
+    }
+
+    protected $table = 'absen';
+    protected $primaryKey = 'id_absen';
+    protected $fillable = [
       'id_siswa',
       'status',
 
-  ];
+    ];
 
 }

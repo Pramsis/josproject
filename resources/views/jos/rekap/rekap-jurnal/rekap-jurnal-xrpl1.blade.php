@@ -1,4 +1,4 @@
-#ED1212@extends('Layouts.t_kelas')
+@extends('Layouts.t_kelas')
 
 @section('title')
 Rekap X RPL 1

@@ -60,6 +60,7 @@ class JosController extends Controller
 
     public function xrpl1()
     {
+
       $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'X RPL 1');
       return view('jos/siswa/xrpl1', ['Mastersiswas' => $Mastersiswas]);
     }

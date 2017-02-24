@@ -4,11 +4,35 @@
 Login
 @endsection
 
-@section('jumbotron')
-<h1>Jurnal Online Sekolah</h1>
-<h3>Memudahkan Anda Dalam Absensi Dan Jurnal</h3>
-<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
-<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+@section('slider')
+<div id="myCarousel" class="carousel slide slider"data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner slider" role="listbox">
+    <div class="item active slider">
+      <img src="{{ asset('css/images/people-coffee-notes-tea.jpg') }}">
+      <div class="carousel-caption">
+        <h2>Created Your Life Algorithm</h2>
+        <h4>Pramsis - Leader</h4>
+      </div>
+    </div>
+
+    <div class="item slider">
+      <img src="{{ asset('css/images/leave-board-hand-learn-54597.jpeg') }}">
+      <div class="carousel-caption">
+        <h2>Schools Can't Give You A Success,  But School Can Give You Spirit</h2>
+        <h4>Fahmi - The Expert</h4>
+      </div>
+    </div>
+
+    <div class="item slider">
+      <img src="{{ asset('css/images/pexels-photo-207580.jpeg') }}">
+      <div class="carousel-caption">
+        <h2>Hacking Like A Magic ,We Have Know About Identity Of Target </h2>
+        <h4>Abihu - Hackerman</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection

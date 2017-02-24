@@ -11,6 +11,7 @@ class Masterjurnal extends Model
     use SoftDeletes;
 
 
+
   protected $table = 'master-jurnal';
   protected $primaryKey = 'id_jurnal';
   protected $fillable = [

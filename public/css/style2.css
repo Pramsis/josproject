@@ -2,7 +2,7 @@ body
 {
     margin:0;
     padding: 0;
-    background: url("images/forest-patrol-flat-wallpaper-background.jpg");
+    background:;
     background-attachment: fixed;
     background-size:100% 100%;
 }
@@ -10,8 +10,21 @@ body
 .navbar
 {
     background: rgb(255,255,255);
+    border-bottom: 2px solid black;
 
 }
+
+.navbar-textcolor
+{
+    color:black;
+}
+
+/*slider*/
+.slider
+{
+    height:642px;
+}
+
 /* Table Border */
 
 .border
@@ -34,7 +47,7 @@ center
 .jumbotron
 {
     margin-top: 30px;
-    background: rgba(255,255,255,0.70);
+    background: url("images/startup-photos.jpg");
 }
 
 .container .form-inline
@@ -70,6 +83,7 @@ center
 {
   margin-top:7px;
 }
+
 
 .thumbnail
 {

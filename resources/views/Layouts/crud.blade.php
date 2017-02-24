@@ -17,9 +17,13 @@
 
     @include('Layouts.partials._navigation')
 
+    @yield('slider')
+
+    @yield('content')
+
     @include('Layouts.partials._modal')
 
-    @include('Layouts.partials._table')
+    @include('Layouts.partials._tablecrud')
 
     @include('layouts.partials._footer')
 
