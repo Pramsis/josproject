@@ -16,7 +16,7 @@
   <body onload="startTime()">
 
     @include('Layouts.partials._navigation')
-    
+
     @yield('slider')
 
     @yield('content')
@@ -24,6 +24,8 @@
     @yield('content2')
 
     @yield('content3')
+
+    @yield('content4')
 
     @include('layouts.partials._footer')
 

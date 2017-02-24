@@ -61,7 +61,7 @@ class="active"
 <div class="container">
   <div class="ro">
     <div class="col-md-12">
-      <h1 class="text-center text-home">The Student Of X RPL 1</h1>
+      <h1 class="text-center text-home">Siswa Dari X RPL 1</h1>
     </div>
   </div>
 </div>

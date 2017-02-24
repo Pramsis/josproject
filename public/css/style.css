@@ -44,9 +44,7 @@ body
   border-color: #f1f1f1;
 }
 
-/*horizontal line*/
-
-
+/*table*/
 .border
 {
   border-radius:5px;
@@ -110,17 +108,18 @@ body
   margin-top: 35px;
   margin-bottom:60px;
 }
-
+/*text*/
 .text
 {
   text-align: justify;
 }
 
-.text-home
+.text-opinion
 {
-  ;
+  padding-bottom: 150px;
 }
 
+/*-----*/
 .center-block {
   display: block;
   margin-left: auto;
@@ -132,11 +131,6 @@ body
   margin-bottom: 20px;
 }
 
-
-.primer
-{
-
-}
 
 /* Slider */
 

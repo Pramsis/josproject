@@ -22,7 +22,7 @@
             <form class="form-inline" action="/loginjos" method="post">
               {{ csrf_field() }}
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nama"  name="nama">
+                <input type="text" class="form-control" placeholder="Nama Lengkap"  name="nama">
                 @if( $errors->has('nisn'))
                  <p> {{ $errors->first('nisn') }}</p>
                 @endif
@@ -33,7 +33,7 @@
                  <p> {{ $errors->first('password') }}</p>
                 @endif
               </div>
-              <button type="submit" name="submit" class="btn btn-default">Login</button>
+              <button type="submit" name="submit" class="btn btn-default">Masuk</button>
             </form>
           </div>
         </div>

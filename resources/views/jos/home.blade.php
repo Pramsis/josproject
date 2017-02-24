@@ -58,51 +58,70 @@ class="active"
 @endsection
 
 @section('content')
+<div class="container text-justify">
+  <hr>
+  <h1 class="text-center">Deskripsi Singkat</h1>
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+</div>
+@endsection
+
+@section('content2')
 <div class="container text-center">
   <hr>
-  <h1>Deskripsi Singkat</h1>
-  <p><em>Jurnal Online Sekolah</em></p>
-  <p>We have created a fictional band website. Lorem ipsum..</p>
-  <br>
+  <h1 class="text-opinion">Pendapat Dari Siswa</h1>
   <div class="row">
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-        <img src="{{ asset('css/images/abihu.jpg') }}" class="img-circle person" alt="Random Name" width="255" height="255">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+      <p class="text-center"><strong>Fahmi Akbar Dzul Fikri</strong></p><br>
+        <img src="{{ asset('css/images/Fahmi-Akbar-DzulFikri.jpg') }}" class="img-circle person" alt="Random Name" width="255" height="255">
+        <p>Alhamdulilah, Berkat adanya Jurnal Online Sekolah bisa memudahkan saya dalam hal absensi dan lebih efisien semoga aplikasi ini lebih di kembangkan lagi ketahap yang lebih profesional</p>
+        <p>Murid SMKN 2 Surabaya Jurusan RPL</p>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Abihu Presly Haezer</strong></p><br>
         <img src="{{ asset('css/images/abihu.jpg') }}" class="img-circle person" alt="Random Name" width="255" height="255">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
+        <p>Syukur , Jurnal online sekolah memang top dan membuat saya agar tidak kedepan ruang piket untuk mengambil buku jurnal sehingga saya bisa datang lebih cepat dikelas apalagi kelas saya ada di paling belakang</p>
+        <p>Murid SMKN 2 Surabaya Jurusan RPL</p>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-        <img src="{{ asset('css/images/abihu.jpg') }}" class="img-circle person" alt="Random Name" width="255" height="255">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
+      <p class="text-center"><strong>Dimas Pramudya Sumarsis</strong></p><br>
+        <img src="{{ asset('css/images/pramsis.jpg') }}" class="img-circle person" alt="Random Name" width="255" height="255">
+        <p>Dengan Adanya Aplikasi ini jurnal online sekolah , membuat para guru semakin mudah dan ingat dalam mengisi jurnal harian sekolah dan tidak perlu mengecek kehadiran dengan memanggil murid satu persatu</p>
+        <p>Murid SMKN 2 Surabaya Jurusan RPL</p>
     </div>
   </div>
 </div>
 @endsection
 
 
-@section('content2')
+@section('content3')
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <hr>
-      <h1 class="text-center text-home">Lihat Siapa Saja Yang Datang Hari Ini</h1>
+      <h1 class="text-center">Lihat Siapa Saja Yang Datang Hari Ini</h1>
     </div>
   </div>
 </div>
 @endsection
 
-@section('content3')
+@section('content4')
 <div class="container">
   <div class="row">
     <div class="col-md-12">

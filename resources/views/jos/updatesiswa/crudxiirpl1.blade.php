@@ -171,7 +171,7 @@ Buat Data Siswa Baru Di Tabel XII RPL 1
   <tr>
     <td colspan="10">
     <center>
-    <button type="button" class="btn btn-primary button-modal primer" data-toggle="modal" data-target="#myModal">Buat Data Siswa Baru Di XII RPL 1</button>
+    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Data Siswa Baru Di XII RPL 1</button>
     </center>
     </td>
   <tr>

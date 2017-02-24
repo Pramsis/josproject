@@ -114,7 +114,8 @@ Isi Jurnal Di Kelas X RPL 1
     <tr>
       <td colspan="5">
       <center>
-      <button type="button" class="btn btn-primary button-modal primer" data-toggle="modal" data-target="#myModal">Isi Jurnal</button>
+      <button type="button" class="btn btn-primary button-modal primer" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+      <strong>Isi Jurnal</strong></button>
       </center>
       </td>
     <tr>
