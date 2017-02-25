@@ -76,50 +76,72 @@ Buat Data Baru Di Table XI RPL 1
 </div>
 @endsection
 
-
+@section('content2')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    @if( $errors->has('nisn'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom NISN Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('nama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('password'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('tanggal_lahir'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Tanggal Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('alamat'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Alamat Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('telepon'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom telepon Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('agama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Agama Lahir Harus Diisi
+        </div>
+    @endif
+    </div>
+  </div>
+</div>
+@endsection
 
 @section('form')
 <form action="/manage/update-xirpl1" method="post">
   <input type="number" name="nisn" class="form-control update"  maxlength="5" placeholder="NISN">
-  @if( $errors->has('nisn'))
-   <p> {{ $errors->first('nisn') }}</p>
-  @endif
   <input type="text" name="nama" class="form-control update" maxlength="255" placeholder="Nama">
-  @if( $errors->has('nama'))
-   <p> {{ $errors->first('nama') }}</p>
-  @endif
   <input type="password" name="password" class="form-control update" maxlength="255" placeholder="Password">
-  @if( $errors->has('password'))
-   <p> {{ $errors->first('password') }}</p>
- @endif
   <select class="form-control update" name="jen_kel">
     <option class="form-control">Pria</option>
     <option class="form-control">Wanita</option>
   </select>
-  <input type="text" name="kelas" class="form-control update" maxlength="25" value="XI RPL 1">
-  @if( $errors->has('kelas'))
-   <p> {{ $errors->first('kelas') }}</p>
-  @endif
+  <input type="hidden" name="kelas" class="form-control update" maxlength="25" value="XI RPL 1">
   <input type="date" name="tanggal_lahir" class="form-control update" maxlength="6" min="1990-01-01" placeholder="Tanggal Lahir">
-  @if( $errors->has('tanggal_lahir'))
-   <p> {{ $errors->first('tanggal_lahir') }}</p>
-  @endif
   <input type="text" name="alamat" class="form-control update" maxlength="255" placeholder="Alamat">
-  @if( $errors->has('alamat'))
-   <p> {{ $errors->first('alamat') }}</p>
-  @endif
   <input type="number" name="telepon" class="form-control update" maxlength="12" placeholder="Telepon">
-  @if( $errors->has('telepon'))
-   <p> {{ $errors->first('telepon') }}</p>
-  @endif
   <input type="text" name="agama" class="form-control update" maxlength="10" placeholder="Agama">
-  @if( $errors->has('agama'))
-   <p> {{ $errors->first('agama') }}</p>
-  @endif
   <input type="hidden" name="level" class="form-control update" maxlength="10" value="Siswa">
-  @if( $errors->has('level'))
-   <p> {{ $errors->first('level') }}</p>
-@endif
 
 @endsection
 

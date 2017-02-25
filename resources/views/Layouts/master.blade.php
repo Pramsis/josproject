@@ -13,7 +13,7 @@
 
 
   </head>
-  <body onload="startTime()" id="myPage">
+  <body onload="startTime()" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
     @include('Layouts.partials._navigation')
 
@@ -27,11 +27,14 @@
 
     @yield('content4')
 
+    @yield('content5')
+
     @include('layouts.partials._footer')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/clock.js') }}"></script>
-
+    <script src="{{ asset('js/googleMap.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyComhy9ExIPwmmGW1AJVzB5Ki-tYUPCvE8&callback=myMap"></script>
   </body>
 </html>

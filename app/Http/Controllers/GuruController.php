@@ -26,7 +26,7 @@ class GuruController extends Controller
     $this->validate($request,[
       'nip' => 'required',
       'nama' => 'required',
-      'password' => 'required',
+      'password' => 'required|min:6',
       'jen_kel' => 'required',
       'type_guru' => 'required',
       'mapel' => 'required',

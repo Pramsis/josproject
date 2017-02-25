@@ -10,7 +10,6 @@ Route::get('/home', 'josController@index')->name('home');
 Route::get('/class', 'JosController@kelas')->name('class');
 Route::get('/jurnal', 'JosController@jurnal')->name('jurnal');
 Route::get('/manage', 'JosController@manage')->name('manage');
-Route::get('/about', 'JosController@about')->name('about');
 // -------------------
 
 //Route Of Absensi

@@ -82,10 +82,7 @@ class JosController extends Controller
       return view('jos/manage');
     }
 
-    public function about()
-    {
-      return view('jos/about');
-    }
+
 
 
 }

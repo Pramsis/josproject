@@ -21,6 +21,8 @@
 
     @yield('content')
 
+    @yield('content2')
+
     @include('Layouts.partials._modal')
 
     @include('Layouts.partials._tablecrud')

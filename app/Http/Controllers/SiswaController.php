@@ -23,7 +23,7 @@ class siswaController extends Controller
       $this->validate($request,[
         'nisn' => 'required',
         'nama' => 'required',
-        'password' => 'required',
+        'password' => 'required|min:6',
         'jen_kel' => 'required',
         'kelas' => 'required',
         'tanggal_lahir' => 'required',

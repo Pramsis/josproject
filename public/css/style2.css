@@ -25,6 +25,20 @@ body
     height:642px;
 }
 
+
+/*alert login*/
+.alert-style
+{
+  margin-top:10px;
+  margin-bottom:-10px;
+  height:33px;
+}
+
+.position-button-text
+{
+  margin-top:-10px;
+}
+
 /* Table Border */
 
 .border

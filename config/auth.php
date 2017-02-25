@@ -41,9 +41,9 @@ return [
             'provider' => 'users',
         ],
 
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
+        'Admin' => [
+            'driver' => 'session',
+            'provider' => 'Admin',
 
         ],
 
@@ -53,11 +53,7 @@ return [
 
         ],
 
-        'administrator' => [
-            'driver' => 'session',
-            'provider' => 'admin',
 
-        ],
 
 
     ],
@@ -90,7 +86,7 @@ return [
             'model' => App\Models\Masterguru::class,
         ],
 
-        'admin' => [
+        'Admin' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],

@@ -68,7 +68,7 @@ class="active"
 @endsection
 
 @section('table')
-<tr>
+<thead>
   <th>#</th>
   <th>NISN</th>
   <th>Nama</th>
@@ -79,7 +79,7 @@ class="active"
   <th>Telepon</th>
   <th>Agama</th>
   <th>Status Kehadiran</th>
-</tr>
+</thead>
 
 <?php
 

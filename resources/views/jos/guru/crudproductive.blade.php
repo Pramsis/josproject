@@ -75,36 +75,51 @@ Buat Data Guru Produktif
 </div>
 @endsection
 
+@section('content2')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    @if( $errors->has('nip'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom NIP Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('nama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('password'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('mapel'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Mata Pelajaran Harus Diisi
+        </div>
+    @endif
+    </div>
+  </div>
+</div>
+@endsection
+
 @section('form')
 <form action="{{ route('productive') }}" method="post">
   <input type="number" name="nip" class="form-control update" placeholder="NIP">
-   @if( $errors->has('nip'))
-    <p> {{ $errors->first('nip') }}</p>
-  @endif
   <input type="text" name="nama" class="form-control update" placeholder="Nama">
-  @if( $errors->has('nama'))
-   <p> {{ $errors->first('nama') }}</p>
- @endif
  <input type="password" name="password" class="form-control update" placeholder="password">
- @if( $errors->has('password'))
-  <p> {{ $errors->first('password') }}</p>
-@endif
   <select class="form-control update" name="jen_kel">
     <option class="form-control">Pria</option>
     <option class="form-control">Wanita</option>
   </select>
   <input type="hidden" name="type_guru" class="form-control update" value="Productive">
-  @if( $errors->has('type_guru'))
-   <p> {{ $errors->first('type_guru') }}</p>
- @endif
-  <input type="text" name="mapel" class="form-control update" placeholder="Mata Pelajaran">
-  @if( $errors->has('mapel'))
-   <p> {{ $errors->first('mapel') }}</p>
- @endif
  <input type="hidden" name="level" class="form-control update" value="Guru">
- @if( $errors->has('level'))
-  <p> {{ $errors->first('level') }}</p>
-@endif
+
 
 @endsection
 

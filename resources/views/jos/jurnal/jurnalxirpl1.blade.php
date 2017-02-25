@@ -77,6 +77,21 @@ Isi Jurnal Di Kelas XI RPL 1
 </div>
 @endsection
 
+@section('content2')
+<div class="container">
+  <div class="ro">
+    <div class="col-md-12">
+    @if( $errors->has('todo'))
+      <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Maaf Anda Harus Mengisi Kolom Jurnal!
+      </div>
+    @endif
+    </div>
+  </div>
+</div>
+@endsection
+
 @section('form')
 <form action="{{ route('jurnal.xrpl1') }}" method="post">
   <input type="hidden" id="myDate" name="date" class="form-control">

@@ -1,7 +1,7 @@
 @extends('Layouts.crud')
 
 @section('title')
-Update Class X RPL 1
+Update X RPL 1
 @endsection
 
 @section('manage')
@@ -13,7 +13,7 @@ class="active"
 @endsection
 
 @section('modal-title')
-Buat Data Siswa Baru Di Tabel X RPL 1
+Buat Data Baru Di Table X RPL 1
 @endsection
 
 @section('slider')
@@ -70,7 +70,58 @@ Buat Data Siswa Baru Di Tabel X RPL 1
 <div class="container">
   <div class="ro">
     <div class="col-md-12">
-      <h1 class="text-center text-home"><hr>Data Kelas X RPL 1</hr></h1>
+      <h1 class="text-center text-home"><hr>Data Kelas XI RPL 1</hr></h1>
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('content2')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    @if( $errors->has('nisn'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom NISN Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('nama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('password'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('tanggal_lahir'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Tanggal Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('alamat'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Alamat Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('telepon'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom telepon Lahir Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('agama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Agama Lahir Harus Diisi
+        </div>
+    @endif
     </div>
   </div>
 </div>
@@ -79,45 +130,18 @@ Buat Data Siswa Baru Di Tabel X RPL 1
 @section('form')
 <form action="/manage/update-xirpl1" method="post">
   <input type="number" name="nisn" class="form-control update"  maxlength="5" placeholder="NISN">
-  @if( $errors->has('nisn'))
-   <p> {{ $errors->first('nisn') }}</p>
-  @endif
   <input type="text" name="nama" class="form-control update" maxlength="255" placeholder="Nama">
-  @if( $errors->has('nama'))
-   <p> {{ $errors->first('nama') }}</p>
-  @endif
   <input type="password" name="password" class="form-control update" maxlength="255" placeholder="Password">
-  @if( $errors->has('password'))
-   <p> {{ $errors->first('password') }}</p>
- @endif
   <select class="form-control update" name="jen_kel">
     <option class="form-control">Pria</option>
     <option class="form-control">Wanita</option>
   </select>
-  <input type="text" name="kelas" class="form-control update" maxlength="25" value="X RPL 1">
-  @if( $errors->has('kelas'))
-   <p> {{ $errors->first('kelas') }}</p>
-  @endif
+  <input type="hidden" name="kelas" class="form-control update" maxlength="25" value="X RPL 1">
   <input type="date" name="tanggal_lahir" class="form-control update" maxlength="6" min="1990-01-01" placeholder="Tanggal Lahir">
-  @if( $errors->has('tanggal_lahir'))
-   <p> {{ $errors->first('tanggal_lahir') }}</p>
-  @endif
   <input type="text" name="alamat" class="form-control update" maxlength="255" placeholder="Alamat">
-  @if( $errors->has('alamat'))
-   <p> {{ $errors->first('alamat') }}</p>
-  @endif
   <input type="number" name="telepon" class="form-control update" maxlength="12" placeholder="Telepon">
-  @if( $errors->has('telepon'))
-   <p> {{ $errors->first('telepon') }}</p>
-  @endif
   <input type="text" name="agama" class="form-control update" maxlength="10" placeholder="Agama">
-  @if( $errors->has('agama'))
-   <p> {{ $errors->first('agama') }}</p>
-  @endif
   <input type="hidden" name="level" class="form-control update" maxlength="10" value="Siswa">
-  @if( $errors->has('level'))
-   <p> {{ $errors->first('level') }}</p>
-   @endif
 
 @endsection
 
@@ -160,7 +184,7 @@ Buat Data Siswa Baru Di Tabel X RPL 1
           <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
         </a>
         <button type="submit" name="submit" class="btn btn-danger btn-sm">
-          <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
         </button>
       </form>
     </td>
@@ -169,7 +193,7 @@ Buat Data Siswa Baru Di Tabel X RPL 1
   <tr>
     <td colspan="10">
     <center>
-    <button type="button" class="btn btn-primary button-modal primer" data-toggle="modal" data-target="#myModal">Buat Data Siswa Baru Di X RPL 1</button>
+    <button type="button" class="btn btn-primary button-modal primer" data-toggle="modal" data-target="#myModal">Buat Data Siswa Baru Di XI RPL 1</button>
     </center>
     </td>
   <tr>

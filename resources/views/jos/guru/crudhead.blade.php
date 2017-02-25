@@ -67,9 +67,26 @@ Buat Data Kepala Jurusan
 
 @section('content')
 <div class="container">
-  <div class="ro">
+  <div class="row">
     <div class="col-md-12">
       <h1 class="text-center text-home"><hr>Data Kepala Jurusan</hr></h1>
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('content2')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    @if( count($errors)> 0)
+      @foreach($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> {{ $error }}
+        </div>
+      @endforeach
+    @endif
     </div>
   </div>
 </div>
@@ -78,34 +95,15 @@ Buat Data Kepala Jurusan
 @section('form')
 <form action="{{ route('head') }}" method="post">
   <input type="number" name="nip" class="form-control update" placeholder="NIP">
-   @if( $errors->has('nip'))
-    <p> {{ $errors->first('nip') }}</p>
-  @endif
   <input type="text" name="nama" class="form-control update" placeholder="Nama">
-  @if( $errors->has('nama'))
-   <p> {{ $errors->first('nama') }}</p>
- @endif
- <input type="password" name="password" class="form-control update" placeholder="Password">
- @if( $errors->has('password'))
-  <p> {{ $errors->first('password') }}</p>
-@endif
+  <input type="password" name="password" class="form-control update" placeholder="Password">
   <select class="form-control update" name="jen_kel">
     <option class="form-control">Pria</option>
     <option class="form-control">Wanita</option>
   </select>
   <input type="hidden" name="type_guru" class="form-control update" value="Kepala Jurusan">
-  @if( $errors->has('type_guru'))
-   <p> {{ $errors->first('type_guru') }}</p>
- @endif
   <input type="text" name="mapel" class="form-control update" placeholder="Mata Pelajaran">
-  @if( $errors->has('mapel'))
-   <p> {{ $errors->first('mapel') }}</p>
- @endif
- <input type="hidden" name="level" class="form-control update" value="Guru">
- @if( $errors->has('level'))
-  <p> {{ $errors->first('level') }}</p>
-@endif
-
+  <input type="hidden" name="level" class="form-control update" value="Guru">
 
 @endsection
 

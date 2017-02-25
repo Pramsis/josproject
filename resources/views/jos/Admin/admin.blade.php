@@ -75,27 +75,46 @@ Create Data On Admin Table
 </div>
 @endsection
 
+@section('content2')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    @if( $errors->has('nama'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom NISN Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('password'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('alamat'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
+        </div>
+    @endif
+    @if( $errors->has('telepon'))
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Warning!</strong> Maaf Kolom Tanggal Lahir Harus Diisi
+        </div>
+    @endif
+    </div>
+  </div>
+</div>
+@endsection
+
 
 @section('form')
 <form action="{{ route('Admin') }}" method="post">
   <input type="text" name="nama" class="form-control update" placeholder="Nama">
-  @if( $errors->has('nama'))
-   <p> {{ $errors->first('nama') }}</p>
- @endif
- <input type="password" name="password" class="form-control update" placeholder="Password">
- @if( $errors->has('password'))
-  <p> {{ $errors->first('password') }}</p>
-@endif
+  <input type="password" name="password" class="form-control update" placeholder="Password">
   <input type="text" name="alamat" class="form-control update" placeholder="Alamat">
-  @if( $errors->has('alamat'))
-   <p> {{ $errors->first('alamat') }}</p>
- @endif
- <input type="number" name="telepon" class="form-control update" placeholder="Telepon">
- @if( $errors->has('telepon'))
-  <p> {{ $errors->first('telepon') }}</p>
-@endif
-
-
+  <input type="number" name="telepon" class="form-control update" placeholder="Telepon">
 @endsection
 
 @section('endform')

@@ -21,6 +21,7 @@ body
     color:black;
 }
 
+
 /*slider*/
 .slider
 {
@@ -124,6 +125,12 @@ body
   margin: 0px 0px 100px 0px;
 }
 
+.link-manage
+{
+  color: black;
+  text-decoration: none;
+}
+
 /*horizontal*/
 .horizontal
 {
@@ -165,13 +172,18 @@ body
 }
 
 
+#googleMap {
+    width: 100%; /* Span the entire width of the screen */
+    height: 600px; /* Set the height to 400 pixels */
+
+}
+
 /* Footer */
 
 footer {
     background-color: #2d2d30;
     color: #f5f5f5;
     padding: 32px;
-    margin-top:100px;
 }
 
 footer a {
@@ -182,3 +194,6 @@ footer a:hover {
     color: #777;
     text-decoration: none;
 }
+
+/*google-map*/
+

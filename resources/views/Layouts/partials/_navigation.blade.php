@@ -20,23 +20,21 @@
               @if( Auth::guard('web')->user() )
               <li @yield('recap')><a href="{{ route('rekap') }}">Rekapitulasi</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
-              <li @yield('about')><a href="{{ route('about') }}">Tentang</a></li>
-              <li><a href="/logoutjos">Keluar</a></li>
+
+
               @elseif( Auth::guard('guru')->user() )
               <li @yield('recap')><a href="{{ route('rekap') }}">Rekapitulasi</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Jurnal Sehari Hari</a></li>
               <li @yield('manage')><a href="{{ route('manage') }}">Manajemen Data</a></li>
-              <li @yield('about')><a href="{{ route('about') }}">Tentang</a></li>
-              <li><a href="/logoutjos">Keluar</a></li>
-              @elseif( Auth::guard('administrator')->user() )
-              <li @yield('recap')><a href="{{ route('rekap') }}">Rekap</a></li>
+              @else
+              <li @yield('recap')><a href="{{ route('rekap') }}">Rekapitulasi</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Jurnal Sehari Hari</a></li>
               <li @yield('manage')><a href="{{ route('manage') }}">Manajemen Data</a></li>
-              <li @yield('about')><a href="{{ route('about') }}">Tentang</a></li>
-              <li><a href="/logoutjos">Keluar</a></li>
+
               @endif
+              <li><a href="/logoutjos">Keluar</a></li>
             </ul>
           </div>
         </div>
