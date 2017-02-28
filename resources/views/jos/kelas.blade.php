@@ -9,6 +9,7 @@ class="active"
 @endsection
 
 @section('slider')
+
 <div id="myCarousel" class="carousel slide slider-kelas" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -72,7 +73,7 @@ class="active"
   <div class="row">
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="css/images/pexels-photo-270557.jpeg" alt="">
+        <img src="css/images/xrpl1.jpg" alt="">
         <div class="caption">
           <h1>X RPL 1</h1>
           <h5 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -83,7 +84,7 @@ class="active"
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="css/images/pexels-photo-270557.jpeg" alt="">
+        <img src="css/images/xirpl1.jpg" alt="">
         <div class="caption">
           <h1>XI RPL 1</h1>
           <h5 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -94,7 +95,7 @@ class="active"
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="css/images/pexels-photo-270557.jpeg" alt="">
+        <img src="css/images/xiirpl1.jpg" alt="">
         <div class="caption">
           <h1>XII RPL 1</h1>
           <h5 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

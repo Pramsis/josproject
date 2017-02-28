@@ -12,7 +12,8 @@ class Masterjurnal extends Model
 
 
 
-  protected $table = 'master-jurnal';
+  protected $table = 'master_jurnal';
+
   protected $primaryKey = 'id_jurnal';
   protected $fillable = [
       'id_jurnal',

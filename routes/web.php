@@ -7,6 +7,7 @@ Route::get('/', function () {
 
 //Route Of Master
 Route::get('/home', 'josController@index')->name('home');
+Route::post('/home', 'josController@index')->name('home');
 Route::get('/class', 'JosController@kelas')->name('class');
 Route::get('/jurnal', 'JosController@jurnal')->name('jurnal');
 Route::get('/manage', 'JosController@manage')->name('manage');
@@ -15,6 +16,7 @@ Route::get('/manage', 'JosController@manage')->name('manage');
 //Route Of Absensi
 Route::get('/absensi', 'JosController@absensi')->name('absensi');
 Route::post('/absensi', 'JosController@store')->name('absensi');
+Route::post('/absensi-izin', 'AbsenController@store')->name('absensi-izin');
 //------------------------
 
 //Route Of Rekap
@@ -65,9 +67,13 @@ Route::put('/manage/update-xrpl1/{id}', 'SiswaController@update')->name('student
 Route::get('/manage/update-head', 'GuruController@head')->name('head');
 Route::get('/manage/update-normative', 'GuruController@normative')->name('normative');
 Route::get('/manage/update-productive', 'GuruController@productive')->name('productive');
+Route::get('/manage/update-counseling', 'GuruController@counseling')->name('counseling');
+
 Route::post('/manage/update-head', 'GuruController@store');
 Route::post('/manage/update-normative', 'GuruController@store');
 Route::post('/manage/update-productive', 'GuruController@store');
+Route::post('/manage/update-counseling', 'GuruController@store');
+
 Route::delete('/manage/update-head/{id}', 'GuruController@destroy')->name('teacher.destroy');
 Route::get('/manage/update-head/{id}', 'GuruController@show');
 Route::get('/manage/update-head/{id}/editguru', 'GuruController@editguru')->name('editguru');
@@ -75,14 +81,6 @@ Route::put('/manage/update-head/{id}', 'GuruController@update')->name('teacher.u
 // -----------------------------
 
 //Route Of Admin
-Route::get('/manage/admin', 'AdminController@index')->name('Admin');
-Route::get('/manage/admin', 'AdminController@index')->name('Admin');
-Route::get('/manage/admin', 'AdminController@index')->name('Admin');
-Route::post('/manage/admin', 'AdminController@store');
-Route::delete('/manage/admin/{id}', 'AdminController@destroy')->name('admin.destroy');
-Route::get('/manage/admin/{id}', 'AdminController@show');
-Route::get('/manage/admin/{id}/editadmin', 'AdminController@editadmin')->name('editadmin');
-Route::put('/manage/admin/{id}', 'AdminController@update')->name('admin.update');
 // -----------------------------
 
 Auth::routes();

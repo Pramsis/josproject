@@ -22,12 +22,12 @@
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
 
 
-              @elseif( Auth::guard('guru')->user() )
+              @elseif( Auth::guard('guru')->user()->level == "Guru" )
               <li @yield('recap')><a href="{{ route('rekap') }}">Rekapitulasi</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Jurnal Sehari Hari</a></li>
-              <li @yield('manage')><a href="{{ route('manage') }}">Manajemen Data</a></li>
-              @else
+
+              @else( Auth::guard('guru')->user()->level == "Admin" )
               <li @yield('recap')><a href="{{ route('rekap') }}">Rekapitulasi</a></li>
               <li @yield('class')><a href="{{ route('class') }}">Kelas</a></li>
               <li @yield('jurnal')><a href="{{ route('jurnal') }}">Jurnal Sehari Hari</a></li>

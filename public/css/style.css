@@ -23,6 +23,7 @@ body
 
 
 /*slider*/
+
 .slider
 {
     height:675px;
@@ -101,7 +102,20 @@ body
 
 .update
 {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #777;
+  box-shadow: none;
   margin-top:7px;
+
+}
+
+.update:focus
+{
+  box-shadow: none;
+  border-bottom: 2px solid #2d2d30;
 }
 
 .thumbnail
@@ -109,6 +123,27 @@ body
   margin-top: 35px;
   margin-bottom:60px;
 }
+
+.form-main-focus
+{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #777;
+  box-shadow: none;
+  text-align: center;
+  font-size: 35px;
+}
+
+.form-main-focus:focus
+{
+  box-shadow: none;
+  border-bottom: 2px solid #2d2d30;
+}
+
+.
+
 /*text*/
 .text
 {
@@ -123,6 +158,16 @@ body
 .text-table
 {
   margin: 0px 0px 100px 0px;
+}
+
+.text-gede
+{
+  font-size: 80px
+}
+
+.text-kelas
+{
+  padding-bottom: 60px;
 }
 
 .link-manage
@@ -169,8 +214,20 @@ body
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+    .slider
+    {
+      height: 100%;
+    }
+
+    .slider-kelas
+    {
+      height: 220px;
+    }
 }
 
+
+
+/*map*/
 
 #googleMap {
     width: 100%; /* Span the entire width of the screen */
@@ -184,10 +241,17 @@ footer {
     background-color: #2d2d30;
     color: #f5f5f5;
     padding: 32px;
+    margin-top: 100px;
 }
 
 footer a {
     color: #f5f5f5;
+
+}
+
+footer h3
+{
+  margin-top: -8px;
 }
 
 footer a:hover {
@@ -195,5 +259,8 @@ footer a:hover {
     text-decoration: none;
 }
 
-/*google-map*/
-
+.text-footer
+{
+  font-size: 30px;
+  margin-top: -30px;
+}

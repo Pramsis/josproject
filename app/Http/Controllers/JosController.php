@@ -16,7 +16,8 @@ class JosController extends Controller
   public function index()
   {
 
-   return view('jos/home');
+    $Absens = Absen::all();
+    return view('jos/home', ['Absens' => $Absens]);
   }
 
   public function absensi()
@@ -32,15 +33,19 @@ class JosController extends Controller
   //   foreach ($users as $user) {
        $this->validate($request,[
         'id_siswa' => 'required',
+        'kelas' => 'required',
+        'kedatangan' => 'required',
         'status' => 'required'
 
           ]);
       //   }
-      //
+
       // }
     //Create New Data
     $Absen = new Absen;
     $Absen->id_siswa = $request->id_siswa;
+    $Absen->kelas = $request->kelas;
+    $Absen->kedatangan = $request->kedatangan;
     $Absen->status = $request->status;
     $Absen->save();
     return redirect('home')->with('alert-success', 'Oww Yeahh!! Data Hasbeen Saved');
@@ -62,19 +67,22 @@ class JosController extends Controller
     {
 
       $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'X RPL 1');
-      return view('jos/siswa/xrpl1', ['Mastersiswas' => $Mastersiswas]);
+      $Absens = Absen::all()->where('kelas', 'like', 'X RPL 1');
+      return view('jos/siswa/xrpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }
 
     public function xirpl1()
     {
       $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'XI RPL 1');
-      return view('jos/siswa/xirpl1', ['Mastersiswas' => $Mastersiswas]);
+      $Absens = Absen::all()->where('kelas', 'like', 'XI RPL 1');
+      return view('jos/siswa/xirpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }
 
     public function xiirpl1()
     {
       $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'XII RPL 1');
-      return view('jos/siswa/xiirpl1', ['Mastersiswas' => $Mastersiswas]);
+      $Absens = Absen::all()->where('kelas', 'like', 'XII RPL 1');
+      return view('jos/siswa/xiirpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }
 
     public function manage()

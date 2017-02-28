@@ -77,54 +77,7 @@ Buat Data Baru Di Table X RPL 1
 @endsection
 
 @section('content2')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-    @if( $errors->has('nisn'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom NISN Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('nama'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('password'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('tanggal_lahir'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Tanggal Lahir Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('alamat'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Alamat Lahir Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('telepon'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom telepon Lahir Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('agama'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Agama Lahir Harus Diisi
-        </div>
-    @endif
-    </div>
-  </div>
-</div>
+@include('Layouts.partials._alert')
 @endsection
 
 @section('form')

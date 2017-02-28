@@ -23,6 +23,10 @@
 
     @include('Layouts.partials._table')
 
+    @yield('content2')
+
+    @include('Layouts.partials._modal')
+
     @include('layouts.partials._footer')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

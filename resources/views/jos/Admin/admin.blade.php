@@ -1,19 +1,16 @@
 @extends('Layouts.crud')
 
 @section('title')
-Admin
+Update Head Data
 @endsection
 
 @section('manage')
 class="active"
 @endsection
 
-@section('header')
-@include('Layouts.partials._modal')
-@endsection
 
 @section('modal-title')
-Create Data On Admin Table
+Buat Data Guru Bimbingan Konseling
 @endsection
 
 @section('slider')
@@ -67,54 +64,32 @@ Create Data On Admin Table
 
 @section('content')
 <div class="container">
-  <div class="ro">
+  <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center text-home"><hr>Data Admin</hr></h1>
+      <h1 class="text-center text-home"><hr>Data Guru Bimbingan Konseling</hr></h1>
     </div>
   </div>
 </div>
 @endsection
 
 @section('content2')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-    @if( $errors->has('nama'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom NISN Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('password'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('alamat'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('telepon'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Tanggal Lahir Harus Diisi
-        </div>
-    @endif
-    </div>
-  </div>
-</div>
+@include('Layouts.partials._alert')
 @endsection
 
 
 @section('form')
-<form action="{{ route('Admin') }}" method="post">
+<form action="{{ route('head') }}" method="post">
+  <input type="number" name="nip" class="form-control update" placeholder="NIP">
   <input type="text" name="nama" class="form-control update" placeholder="Nama">
   <input type="password" name="password" class="form-control update" placeholder="Password">
-  <input type="text" name="alamat" class="form-control update" placeholder="Alamat">
-  <input type="number" name="telepon" class="form-control update" placeholder="Telepon">
+  <select class="form-control update" name="jen_kel">
+    <option class="form-control">Pria</option>
+    <option class="form-control">Wanita</option>
+  </select>
+  <input type="hidden" name="type_guru" class="form-control update" value="Guru Bimbingan Konseling">
+  <input type="text" name="mapel" class="form-control update" value="Bimbingan Konseling">
+  <input type="hidden" name="level" class="form-control update" value="Admin">
+
 @endsection
 
 @section('endform')
@@ -126,28 +101,32 @@ Create Data On Admin Table
 @section('table')
 <tr>
   <th>#</th>
+  <th>NIP</th>
   <th>Nama</th>
-  <th>Alamat</th>
-  <th>Telepon</th>
+  <th>Jenis Kelamin</th>
+  <th>Tipe Guru</th>
+  <th>Mata Pelajaran</th>
   <th>Action</th>
 </tr>
 
 <?php $no=1; ?>
 
-  @foreach($Admin as $Admin)
+  @foreach($Mastergurus as $Masterguru)
   <tr>
     <td>{{ $no++ }}</td>
-    <td>{{ $Admin->nama }}</td>
-    <td>{{ $Admin->alamat }}</td>
-    <td>{{ $Admin->telepon }}</td>
+    <td>{{ $Masterguru->nip }}</td>
+    <td>{{ $Masterguru->nama }}</td>
+    <td>{{ $Masterguru->jen_kel }}</td>
+    <td>{{ $Masterguru->type_guru }}</td>
+    <td>{{ $Masterguru->mapel }}</td>
     <td>
-      <form class="" action="/manage/admin/{{ $Admin->id_admin }}" method="post">
+      <form class="" action="/manage/update-head/{{ $Masterguru->id_guru }}" method="post">
         <input type="hidden" name="_method" value="delete">
         {{ csrf_field() }}
-        <a href="{{ route('editadmin', $Admin->id_admin)}}" class="btn btn-primary">
+        <a href="{{ route('editguru', $Masterguru->id_guru)}}" class="btn btn-primary">
           <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
         </a>
-        <button type="submit" name="submit" class="btn btn-danger">
+        <button type="submit" name="submit" class="btn btn-danger" value="Delete">
           <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
         </button>
       </form>
@@ -156,9 +135,9 @@ Create Data On Admin Table
 
   @endforeach
   <tr>
-    <td colspan="5">
+    <td colspan="10">
     <center>
-    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Admin</button>
+    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Data Guru Konseling</button>
     </center>
     </td>
   <tr>

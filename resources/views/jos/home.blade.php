@@ -4,6 +4,7 @@
 Jurnal Online Sekolah
 @endsection
 
+
 @section('home')
 class="active"
 @endsection
@@ -45,12 +46,12 @@ class="active"
   </div>
 
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+  <a class="left carousel-control slider" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  <a class="right carousel-control slider" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right " aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -58,6 +59,37 @@ class="active"
 @endsection
 
 @section('content')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <hr class="horizontal">
+      @if( Auth::guard('web')->user() )
+        <h1 class="text-center text-gede text-table"><script src="{{ asset('js/greetings.js') }}"></script><br> {{ auth::guard('web')->user()->nama }}</h1>
+      @elseif( Auth::guard('guru')->user()->level == 'Guru' )
+        <h1 class="text-center text-gede text-table"><script src="{{ asset('js/greetings.js') }}"></script><br> {{ auth::guard('guru')->user()->nama }}</h1>
+      @elseif( Auth::guard('guru')->user()->level == 'Admin')
+        <h1 class="text-center text-gede text-table"><script src="{{ asset('js/greetings.js') }}"></script><br> Admin - {{auth::guard('guru')->user()->nama }}</h1>
+      @endif
+        <h2 class="text-center"><b>Tuangkan Pikiranmu Disini</b></h2>
+        <br><br>
+        <form method="post" action="{{ route('home') }}">
+          <input type="text" name="main-focus" class="form-control input-lg form-main-focus">
+          {{ csrf_field() }}
+        </form>
+        <?php
+          if(isset($_POST['main-focus']))
+          {
+            $nama = $_POST['main-focus'];
+            echo "<center><h2><b>Dalam Pikiran Saya</b> $nama</h2></center>";
+          }
+        ?>
+
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('content2')
 <div class="container text-justify">
   <hr class="horizontal">
   <h1 class="text-center">Deskripsi Singkat - Jurnal Online Sekolah</h1>
@@ -65,7 +97,7 @@ class="active"
     <div class="col-md-12">
       <div class="jumbotron">
           <h3 class="text-justify">Assalamu'alaikum</h3>
-          <h3 class="text-justify">Kami hadir dari masalah yang sering muncul desekolah yaitu masalah absensi dan jurnal . sering kali kita
+          <h3 class="text-justify">Kami hadir dari masalah yang sering muncul disekolah yaitu masalah absensi dan jurnal . sering kali kita
           terkadang lupa dalam absensi dan mengisi jurnal . dan kadang juga ada kesalahan teknis seperti lupa dalam mengambil jurnal di depan piket
           dan  guru yang tidak masuk kelas karena berbagai alasan . ya! masalah masalah seperti ini selalu menghambat proses belajar mengajar kita
           karena absensi kita akan direkap dan dijadikan syarat kenaikan kelas. jika absen kita tidak teratur dan bolong bolong. Ya? itu resikonya.</h3>
@@ -82,7 +114,7 @@ class="active"
 </div>
 @endsection
 
-@section('content2')
+@section('content3')
 <div class="container text-center">
   <hr class="horizontal">
   <h1 class="text-opinion">Pendapat Dari Siswa</h1>
@@ -109,8 +141,20 @@ class="active"
 </div>
 @endsection
 
+@section('content4')
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <hr class="horizontal">
+      <h1 class="text-center text-table">Pastikan Kamu Sudah Berada Di Sekolah</h1>
+    </div>
+  </div>
+</div>
+<div id="googleMap"></div>
+@endsection
 
-@section('content3')
+
+@section('content5')
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -121,7 +165,7 @@ class="active"
 </div>
 @endsection
 
-@section('content4')
+@section('content6')
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -135,53 +179,37 @@ class="active"
           <th class="text-center">Datang Pada</th>
         </thead>
 
-        <?php $no=1; ?>
 
 
+        <?php
+
+        $no=1;
+        // $sql = "SELECT master-siswa.nisn, master-siswa.nama, master-siswa.kelas, master-siswa.status
+        //           FROM Absen
+        //           INNER JOIN Mastersiswa
+        //           ON absen.id_siswa=master-siswa.id_siswa";
+
+
+         // foreach ($Absens as $Absen) {
+        //   $Mastersiswa = App\Models\Mastersiswa::find($Absen->id_siswa);
+        //   echo  $Mastersiswa->nama. ' Hari Ini ' . $Absen->status. '<br>' ;
+
+        // }
+
+        ?>
+
+        @foreach( $Absens as $Absen)
+          <?php $Mastersiswa = App\Models\Mastersiswa::find($Absen->id_siswa) ?>
           <tr>
             <td>{{ $no++ }}</td>
-            <td>25910</td>
-            <td>Abihu</td>
-            <td>X RPL 1</td>
-            <td>Tepat Waktu</td>
-            <td>2017-02-17 06:36:43</td>
+            <td>{{ $Mastersiswa->nisn }}</td>
+            <td>{{ $Mastersiswa->nama }}</td>
+            <td>{{ $Mastersiswa->kelas }}</td>
+            <td>{{ $Absen->status }}</td>
+            <td>{{ $Absen->kedatangan }}</td>
           </tr>
 
-           <tr>
-            <td>{{ $no++ }}</td>
-            <td>25910</td>
-            <td>Abihu</td>
-            <td>X RPL 1</td>
-            <td>Tepat Waktu</td>
-            <td>2017-02-17 06:36:43</td>
-          </tr>
-
-           <tr>
-            <td>{{ $no++ }}</td>
-            <td>25910</td>
-            <td>Abihu</td>
-            <td>X RPL 1</td>
-            <td>Tepat Waktu</td>
-            <td>2017-02-17 06:36:43</td>
-          </tr>
-
-           <tr>
-            <td>{{ $no++ }}</td>
-            <td>25910</td>
-            <td>Abihu</td>
-            <td>X RPL 1</td>
-            <td>Tepat Waktu</td>
-            <td>2017-02-17 06:36:43</td>
-          </tr>
-
-           <tr>
-            <td>{{ $no++ }}</td>
-            <td>25910</td>
-            <td>Abihu</td>
-            <td>X RPL 1</td>
-            <td>Tepat Waktu</td>
-            <td>2017-02-17 06:36:43</td>
-          </tr>
+        @endforeach
 
         </table>
     </div>
@@ -189,8 +217,3 @@ class="active"
 </div>
 @endsection
 
-@section('content5')
-  <hr class="horizontal">
-  <h1 class="text-center text-table">Pastikan Kamu Berada Di Sekolah</h1>
-  <div id="googleMap"></div>
-@endsection

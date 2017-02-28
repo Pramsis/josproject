@@ -76,36 +76,7 @@ Buat Data Guru Normatif
 @endsection
 
 @section('content2')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-    @if( $errors->has('nip'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom NIP Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('nama'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Nama Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('password'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Password Harus Diisi
-        </div>
-    @endif
-    @if( $errors->has('mapel'))
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> Maaf Kolom Mata Pelajaran Harus Diisi
-        </div>
-    @endif
-    </div>
-  </div>
-</div>
+@include('Layouts.partials._alert')
 @endsection
 
 @section('form')

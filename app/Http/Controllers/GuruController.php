@@ -45,7 +45,7 @@ class GuruController extends Controller
     $Masterguru->mapel = $request->mapel;
     $Masterguru->level = $request->level;
     $Masterguru->save();
-    return back()->with('alert-success', 'Oww Yeahh!! Data Hasbeen Saved');
+    return back()->with('alert-success', 'Oke Data Telap Tersimpan');
   }
 
   public function normative()
@@ -58,6 +58,12 @@ class GuruController extends Controller
   {
     $Mastergurus = Masterguru::all()->where('type_guru', 'like', 'Productive');
     return view('jos/guru/crudproductive', ['Mastergurus' => $Mastergurus]);
+  }
+
+  public function counseling()
+  {
+    $Mastergurus = Masterguru::all()->where('type_guru', 'like', 'Guru Bimbingan Konseling');
+    return view('jos/Admin/admin', ['Mastergurus' => $Mastergurus]);
   }
 
   public function editguru($id)
@@ -101,6 +107,6 @@ class GuruController extends Controller
     //delete Data
     $masterGuru = Masterguru::find($id);
     $masterGuru->delete();
-    return back();
+    return back()->with('alert-success', 'Oke Data Telap Terhapus');
   }
 }

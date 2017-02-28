@@ -8,9 +8,6 @@ Update Head Data
 class="active"
 @endsection
 
-@section('header')
-@include('Layouts.partials._modal')
-@endsection
 
 @section('modal-title')
 Buat Data Kepala Jurusan
@@ -76,21 +73,9 @@ Buat Data Kepala Jurusan
 @endsection
 
 @section('content2')
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-    @if( count($errors)> 0)
-      @foreach($errors->all() as $error)
-        <div class="alert alert-danger alert-dismissible" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>Warning!</strong> {{ $error }}
-        </div>
-      @endforeach
-    @endif
-    </div>
-  </div>
-</div>
+@include('Layouts.partials._alert')
 @endsection
+
 
 @section('form')
 <form action="{{ route('head') }}" method="post">
@@ -149,11 +134,13 @@ Buat Data Kepala Jurusan
   </tr>
 
   @endforeach
-  <tr>
-    <td colspan="10">
-    <center>
-    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Data Kepala Jurusan</button>
-    </center>
-    </td>
-  <tr>
+
+    <tr>
+      <td colspan="10">
+      <center>
+      <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Data Kepala Jurusan</button>
+      </center>
+      </td>
+    <tr>
+
 @endsection

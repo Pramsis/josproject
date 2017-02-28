@@ -4,7 +4,7 @@ var d = new Date();
     if (time < 7)
       {
       }
-      document.getElementById('my_id').value='Tepat Waktu' ;
+      document.getElementById('my_id').value='Pas Waktu' ;
     if (time == 7)
       {
       document.getElementById('my_id').value='Terlambat' ;

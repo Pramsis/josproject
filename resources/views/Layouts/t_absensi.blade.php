@@ -13,7 +13,7 @@
 
 
   </head>
-  <body onload="startTime()" id="myPage">
+  <body onload="startTime(), tanggal()" id="myPage">
 
 
 
@@ -26,5 +26,6 @@
     <script src="{{ asset('js/clock.js') }}"></script>
     <script src="{{ asset('js/button.js') }}"></script>
     <script src="{{ asset('js/nihil.js') }}"></script>
+    <script src="{{ asset('js/date.js') }}"></script>
   </body>
 </html>

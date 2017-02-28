@@ -2,7 +2,7 @@ body
 {
     margin:0;
     padding: 0;
-    background:;
+    background:url("{{ asset('css/images/gambar-login.jpeg') }}");
     background-attachment: fixed;
     background-size:100% 100%;
 }
@@ -93,6 +93,23 @@ center
   margin: 10px;
 }
 
+.form-login
+{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #777;
+  box-shadow: none;
+}
+
+
+.form-login:focus
+{
+  box-shadow: none;
+  border-bottom: 2px solid #2d2d30;
+}
+
 .update
 {
   margin-top:7px;
@@ -150,6 +167,12 @@ center
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+
+    .slider
+    {
+        height:100%;
+    }
+
 }
 
 

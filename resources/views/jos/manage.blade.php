@@ -105,7 +105,7 @@ class="active"
         <div class="caption">
           <h1>Data Admin</h1>
           <h5 class="text">Lorem ipsum dolor sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</h5>
-          <a href="{{ route('Admin') }}" class="link-manage"><h4 class="text-center">Admin</h4></a>
+          <a href="{{ route('counseling') }}" class="link-manage"><h4 class="text-center">Admin</h4></a>
         </div>
       </div>
     </div>

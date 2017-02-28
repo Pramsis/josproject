@@ -29,6 +29,8 @@
 
     @yield('content5')
 
+    @yield('content6')
+
     @include('layouts.partials._footer')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -36,5 +38,7 @@
     <script src="{{ asset('js/clock.js') }}"></script>
     <script src="{{ asset('js/googleMap.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyComhy9ExIPwmmGW1AJVzB5Ki-tYUPCvE8&callback=myMap"></script>
+    <script src="{{ asset('jquery.js')}}"></script>
+    <script src="{{ asset('jquery-1.11.3.min.js')}}"></script>
   </body>
 </html>

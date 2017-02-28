@@ -70,6 +70,7 @@ class="active"
 @section('table')
 <thead>
   <th>#</th>
+  <th>ID Siswa</th>
   <th>NISN</th>
   <th>Nama</th>
   <th>Jenis Kelamin</th>
@@ -78,21 +79,20 @@ class="active"
   <th>Alamat</th>
   <th>Telepon</th>
   <th>Agama</th>
-  <th>Status Kehadiran</th>
 </thead>
 
 <?php
 
 $no=1;
-
+// $Absen = App\Models\Absen::find(9);
 
 ?>
 
   @foreach($Mastersiswas as $Mastersiswa)
-
-
+    <?php $Absen = App\Models\Absen::find($Mastersiswa->id_siswa) ?>
   <tr>
     <td>{{ $no++ }}</td>
+    <td>{{ $Mastersiswa->id_siswa }}</td>
     <td>{{ $Mastersiswa->nisn }}</td>
     <td>{{ $Mastersiswa->nama }}</td>
     <td>{{ $Mastersiswa->jen_kel }}</td>
@@ -101,8 +101,69 @@ $no=1;
     <td>{{ $Mastersiswa->alamat }}</td>
     <td>{{ $Mastersiswa->telepon }}</td>
     <td>{{ $Mastersiswa->agama }}</td>
-    <td></td>
   <tr>
-  @endforeach
+@endforeach
 
+
+@endsection
+
+@section('content2')
+<div class="container">
+  <div class="ro">
+    <div class="col-md-12">
+    <hr>
+      <h1 class="text-center text-home text-kelas">Absensi Kehadiran X RPL 1</h1>
+      <table class="table table-hover table-home text-center">
+        <thead>
+          <th class="text-center">#</th>
+          <th class="text-center">NISN</th>
+          <th class="text-center">Nama</th>
+          <th class="text-center">Kelas</th>
+          <th class="text-center">Status</th>
+          <th class="text-center">Datang Pada</th>
+        </thead>
+
+
+
+        <?php
+
+        $no=1;
+
+        ?>
+
+        @foreach( $Absens as $Absen)
+          <?php $Mastersiswa = App\Models\Mastersiswa::find($Absen->id_siswa) ?>
+          <tr>
+            <td>{{ $no++ }}</td>
+            <td>{{ $Mastersiswa->nisn }}</td>
+            <td>{{ $Mastersiswa->nama }}</td>
+            <td>{{ $Mastersiswa->kelas}}</td>
+            <td>{{ $Absen->status }}</td>
+            <td>{{ $Absen->kedatangan }}</td>
+          </tr>
+
+        @endforeach
+          <tr>
+            <td colspan="10">
+            <center>
+            <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Izin Khusus Siswa Yang Tidak Masuk</button>
+            </center>
+            </td>
+          <tr>
+        </table>
+    </div>
+  </div>
+</div>
+@endsection
+
+@section('form')
+<form action="/absensi-izin" method="post">
+  <input type="text" name="id_siswa" placeholder="Masukkan ID Siswa" class="form-control update">
+  <input type="hidden" name="kelas" value="X RPL 1" class="form-control update">
+  <input type="hidden" value="Tidak Masuk" name="kedatangan" class="form-control">
+  <input type="text" name="status" class="form-control update" placeholder="Masukkan Alasan Mengapa Tidak Masuk">
+@endsection
+
+@section('endform')
+</form>
 @endsection

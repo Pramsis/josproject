@@ -23,7 +23,7 @@ class JurnalController extends Controller
     $this->validate($request,[
       'date' => 'required',
       'kelas' => 'required',
-      'todo' => 'required',
+      'todo' => 'required|max:25',
       'nama_guru' => 'required',
 
     ]);
@@ -36,7 +36,7 @@ class JurnalController extends Controller
     $Masterjurnal->todo = $request->todo;
     $Masterjurnal->nama_guru = $request->nama_guru;
     $Masterjurnal->save();
-    return back()->with('alert-success', 'Oww Yeahh!! Data Hasbeen Saved');
+    return back()->with('alert-success', 'Data Jurnal Telah Disimpan');
   }
 
 

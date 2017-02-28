@@ -47,7 +47,7 @@ class siswaController extends Controller
       $Mastersiswa->agama = $request->agama;
       $Mastersiswa->level = $request->level;
       $Mastersiswa->save();
-      return back()->with('alert-success', 'Oww Yeahh!! Data Hasbeen Saved');
+      return back()->with('alert-success', 'Oke Data Telah Tersimpan');
 
   }
 

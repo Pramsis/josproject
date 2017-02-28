@@ -16,7 +16,9 @@ class Absen extends Migration
         Schema::create('absen', function (Blueprint $table) {
             $table->increments('id_absen');
             $table->integer('id_siswa');
+            $table->string('kelas', '10');
             $table->string('status', '10');
+            $table->string('kedatangan', '50');
             $table->timestamps();
         });
     }

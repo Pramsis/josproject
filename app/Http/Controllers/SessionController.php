@@ -28,10 +28,7 @@ class SessionController extends Controller
       elseif ( Auth::guard('guru')->attempt(request(['nama', 'password']))) {
         return redirect('home');
       }
-      elseif ( Auth::guard('Admin')->attempt(request(['nama', 'password']))) {
-        return redirect('home');
-      }
-        return back()->with('alert-fail-login', 'Nama Atau Password Kamu Invalid');
+        return back()->with('alert-fail', 'Nama Atau Password Kamu Invalid');
 
     }
 

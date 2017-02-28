@@ -19,16 +19,19 @@ class RekapController extends Controller
     public function rekapAbsenXrpl1()
     {
 
-        dd('absen-xrpl1');
+        $Absens = Absen::all()->where('kelas', 'like', 'X RPL 1');;
+        return view('jos/rekap/rekap-Absen/rekap-absen-xrpl1', ['Absens' => $Absens]);
     }
 
     public function rekapAbsenXirpl1()
     {
-        dd('absen-xirpl1');
+        $Absens = Absen::all()->where('kelas', 'like', 'XI RPL 1');;
+        return view('jos/rekap/rekap-Absen/rekap-absen-xirpl1', ['Absens' => $Absens]);
     }
     public function rekapAbsenXiirpl1()
     {
-        dd('absen-xiirpl1');
+        $Absens = Absen::all()->where('kelas', 'like', 'XII RPL 1');;
+        return view('jos/rekap/rekap-Absen/rekap-absen-xiirpl1', ['Absens' => $Absens]);
     }
 
     public function rekapJurnalXrpl1()

@@ -11,13 +11,15 @@ class Absen extends Model
 
     public function Mastersiswa()
     {
-        return $this->hasOne('App\Models\Mastersiswa', 'id_siswa');
+        return $this->hasMany('App\Models\Mastersiswa', 'id_siswa');
     }
 
     protected $table = 'absen';
     protected $primaryKey = 'id_absen';
     protected $fillable = [
       'id_siswa',
+      'kelas',
+      'kedatangan',
       'status',
 
     ];
