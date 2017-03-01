@@ -55,6 +55,7 @@ $no=1;
 
 
 @endforeach
+  @if(Auth::guard('guru')->user())
   <tr>
     <td colspan="10">
     <center>
@@ -62,6 +63,7 @@ $no=1;
     </center>
     </td>
   </tr>
+@endif
 
 @endsection
 @section('form')
