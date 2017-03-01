@@ -30,7 +30,7 @@
             <form class="form-inline" action="/loginjos" method="post">
               {{ csrf_field() }}
               <div class="form-group">
-                <input type="text" class="form-control form-login" placeholder="Nama Lengkap"  name="nama">
+                <input type="text" class="form-control form-login" placeholder="Username"  name="username">
               </div>
               <div class="form-group">
                 <input type="password" class="form-control form-login" id="pwd" placeholder="Password" name="password">

@@ -17,6 +17,7 @@ class MasterSiswa extends Migration
             $table->increments('id_siswa');
             $table->integer('nisn')->unique();
             $table->string('nama' , '25');
+            $table->string('username' , '25');
             $table->string('password' , '60');
             $table->string('jen_kel' , '25');
             $table->string('kelas' , '25');

@@ -23,6 +23,7 @@ class siswaController extends Controller
       $this->validate($request,[
         'nisn' => 'required',
         'nama' => 'required',
+        'username' => 'required',
         'password' => 'required|min:6',
         'jen_kel' => 'required',
         'kelas' => 'required',
@@ -38,6 +39,7 @@ class siswaController extends Controller
       $Mastersiswa = new Mastersiswa;
       $Mastersiswa->nisn = $request->nisn;
       $Mastersiswa->nama = $request->nama;
+      $Mastersiswa->username = $request->username;
       $Mastersiswa->password = bcrypt($request->password);
       $Mastersiswa->jen_kel = $request->jen_kel;
       $Mastersiswa->kelas = $request->kelas;

@@ -21,7 +21,7 @@ class AbsenController extends Controller
             'id_siswa' => 'required',
             'kelas' => 'required',
             'kedatangan' => 'required',
-            'status' => 'required'
+            'status' => 'required|max:10'
 
               ]);
           //   }
@@ -34,7 +34,7 @@ class AbsenController extends Controller
         $Absen->kedatangan = $request->kedatangan;
         $Absen->status = $request->status;
         $Absen->save();
-        return back();
+        return back()->with('alert-gagal', 'Maksimal Harus 10 Karakter');
 
         }
 }

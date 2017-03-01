@@ -22,10 +22,10 @@ class SessionController extends Controller
 
     public function store()
     {
-      if( Auth::guard('web')->attempt(request(['nama', 'password']))) {
+      if( Auth::guard('web')->attempt(request(['username', 'password']))) {
         return redirect('absensi');
       }
-      elseif ( Auth::guard('guru')->attempt(request(['nama', 'password']))) {
+      elseif ( Auth::guard('guru')->attempt(request(['username', 'password']))) {
         return redirect('home');
       }
         return back()->with('alert-fail', 'Nama Atau Password Kamu Invalid');

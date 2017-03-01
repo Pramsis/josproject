@@ -66,21 +66,21 @@ class JosController extends Controller
     public function xrpl1()
     {
 
-      $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'X RPL 1');
+      $Mastersiswas = Mastersiswa::orderBy('nisn')->where('kelas', 'like', 'X RPL 1')->get();
       $Absens = Absen::all()->where('kelas', 'like', 'X RPL 1');
       return view('jos/siswa/xrpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }
 
     public function xirpl1()
     {
-      $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'XI RPL 1');
+      $Mastersiswas = Mastersiswa::orderBy('nisn')->where('kelas', 'like', 'XI RPL 1')->get();
       $Absens = Absen::all()->where('kelas', 'like', 'XI RPL 1');
       return view('jos/siswa/xirpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }
 
     public function xiirpl1()
     {
-      $Mastersiswas = Mastersiswa::all()->where('kelas', 'like', 'XII RPL 1');
+      $Mastersiswas = Mastersiswa::orderBy('nisn')->where('kelas', 'like', 'XII RPL 1')->get();
       $Absens = Absen::all()->where('kelas', 'like', 'XII RPL 1');
       return view('jos/siswa/xiirpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }

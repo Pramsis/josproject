@@ -9,8 +9,13 @@ Route::get('/', function () {
 Route::get('/home', 'josController@index')->name('home');
 Route::post('/home', 'josController@index')->name('home');
 Route::get('/class', 'JosController@kelas')->name('class');
+
+Route::group(['middleware' => ['siswa']], function(){
 Route::get('/jurnal', 'JosController@jurnal')->name('jurnal');
+});
+Route::group(['middleware' => ['guru']], function(){
 Route::get('/manage', 'JosController@manage')->name('manage');
+});
 // -------------------
 
 //Route Of Absensi
@@ -42,6 +47,8 @@ Route::get('/class/xiirpl1', 'JosController@xiirpl1')->name('class.xiirpl1');
 // ---------------------------
 
 //Route Of JurnalController
+Route::group(['middleware' => ['siswa']], function(){
+
 Route::get('/jurnal/xrpl1', 'JurnalController@jurnalxrpl1')->name('jurnal.xrpl1');
 Route::get('/jurnal/xirpl1', 'JurnalController@jurnalxirpl1')->name('jurnal.xirpl1');
 Route::get('/jurnal/xiirpl1', 'JurnalController@jurnalxiirpl1')->name('jurnal.xiirpl1');
@@ -49,6 +56,10 @@ Route::post('/jurnal/xrpl1', 'JurnalController@store');
 Route::post('/jurnal/xirpl1', 'JurnalController@store');
 Route::post('/jurnal/xiirpl1', 'JurnalController@store');
 // ------------------------------
+
+});
+
+Route::group(['middleware' => ['guru']], function(){
 
 //Route Of CRUD Class
 Route::get('/manage/update-xrpl1', 'SiswaController@crudxrpl1')->name('manage.xrpl1');
@@ -62,22 +73,27 @@ Route::get('/manage/update-xrpl1/{id}', 'SiswaController@show');
 Route::get('/manage/update-xrpl1/{id}/editsiswa', 'SiswaController@editguru')->name('editsiswa');
 Route::put('/manage/update-xrpl1/{id}', 'SiswaController@update')->name('student.update');
 // -------------------------------
+});
+
+Route::group(['middleware' => ['guru']], function(){
 
 //Route Of CRUD Teacher
 Route::get('/manage/update-head', 'GuruController@head')->name('head');
 Route::get('/manage/update-normative', 'GuruController@normative')->name('normative');
 Route::get('/manage/update-productive', 'GuruController@productive')->name('productive');
 Route::get('/manage/update-counseling', 'GuruController@counseling')->name('counseling');
+Route::get('/manage/update-Admin', 'GuruController@Admin')->name('admin');
 
 Route::post('/manage/update-head', 'GuruController@store');
 Route::post('/manage/update-normative', 'GuruController@store');
 Route::post('/manage/update-productive', 'GuruController@store');
-Route::post('/manage/update-counseling', 'GuruController@store');
+Route::post('/manage/update-Admin', 'GuruController@store');
 
 Route::delete('/manage/update-head/{id}', 'GuruController@destroy')->name('teacher.destroy');
 Route::get('/manage/update-head/{id}', 'GuruController@show');
 Route::get('/manage/update-head/{id}/editguru', 'GuruController@editguru')->name('editguru');
 Route::put('/manage/update-head/{id}', 'GuruController@update')->name('teacher.update');
+});
 // -----------------------------
 
 //Route Of Admin

@@ -12,24 +12,24 @@ Login
     <div class="item active slider">
       <img src="{{ asset('css/images/people-coffee-notes-tea.jpg') }}">
       <div class="carousel-caption">
-        <h2>Created Your Life Algorithm</h2>
-        <h4>Pramsis - Leader</h4>
+        <h2>Buatlah Algoritma Hidupmu</h2>
+        <h4>Pramsis - Ketua Tim</h4>
       </div>
     </div>
 
     <div class="item slider">
       <img src="{{ asset('css/images/leave-board-hand-learn-54597.jpeg') }}">
       <div class="carousel-caption">
-        <h2>Schools Can't Give You A Success,  But School Can Give You Spirit</h2>
-        <h4>Fahmi - The Expert</h4>
+        <h2>Sekolah Tidak Bisa Memberikanmu Kesuksesan, Tapi Sekolah Bisa Memberikanmu Semangat</h2>
+        <h4>Fahmi - Paling Menguasai Hal</h4>
       </div>
     </div>
 
     <div class="item slider">
       <img src="{{ asset('css/images/pexels-photo-207580.jpeg') }}">
       <div class="carousel-caption">
-        <h2>Hacking Like A Magic ,We Have Know About Identity Of Target </h2>
-        <h4>Abihu - Hackerman</h4>
+        <h2>Meretas Seperti Sulap , Kita Bisa Tahu Tentang Identitas Orang tersebut Secara Mendalam</h2>
+        <h4>Abihu - Peretas</h4>
       </div>
     </div>
   </div>

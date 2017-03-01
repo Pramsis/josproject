@@ -17,6 +17,7 @@ class MasterGuru extends Migration
             $table->increments('id_guru');
             $table->integer('nip')->unique();
             $table->string('nama' , '25');
+            $table->string('username' , '25');
             $table->string('password' , '60');
             $table->string('jen_kel' , '25');
             $table->string('type_guru' , '25');

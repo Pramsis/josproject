@@ -97,7 +97,14 @@
       </div>
     @endif
 
+    <!-- alert absensi kelas -->
 
+    @if( $errors->has('status'))
+      <div class="alert alert-danger alert-dismissible alert-style" role="alert">
+        <button type="button" class="close position-button-text" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p class="position-button-text"><b>Maaf !</b> Maaf Kolom Alasan Harus Diisi Dan Maksimal 25 Karakter </p>
+      </div>
+    @endif
 
     </div>
   </div>

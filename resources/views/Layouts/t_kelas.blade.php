@@ -17,7 +17,7 @@
 
     @include('Layouts.partials._navigation')
 
-    @yield('slider')
+    @include('Layouts.partials._slider-kelas')
 
     @yield('content')
 

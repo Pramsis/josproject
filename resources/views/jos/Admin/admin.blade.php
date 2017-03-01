@@ -1,7 +1,7 @@
 @extends('Layouts.crud')
 
 @section('title')
-Update Head Data
+Data Admin
 @endsection
 
 @section('manage')
@@ -10,63 +10,18 @@ class="active"
 
 
 @section('modal-title')
-Buat Data Guru Bimbingan Konseling
+Buat Data Admin
 @endsection
 
 @section('slider')
-<div id="myCarousel" class="carousel slide slider-kelas" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner slider-kelas" role="listbox">
-    <div class="item active slider-kelas">
-      <img src="{{ asset('css/images/people-coffee-notes-tea.jpg') }}">
-      <div class="carousel-caption">
-        <h2>Created Your Life Algorithm</h2>
-        <h4>Pramsis - Leader</h4>
-      </div>
-    </div>
-
-    <div class="item slider-kelas">
-      <img src="{{ asset('css/images/leave-board-hand-learn-54597.jpeg') }}">
-      <div class="carousel-caption">
-        <h2>Schools Can't Give You A Success,  But School Can Give You Spirit</h2>
-        <h4>Fahmi - The Expert</h4>
-      </div>
-    </div>
-
-    <div class="item slider-kelas">
-      <img src="{{ asset('css/images/pexels-photo-207580.jpeg') }}">
-      <div class="carousel-caption">
-        <h2>Hacking Like A Magic ,We Have Know About Identity Of Target </h2>
-        <h4>Abihu - Hackerman</h4>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
+  @include('Layouts.partials._slider-kelas')
 @endsection
 
 @section('content')
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="text-center text-home"><hr>Data Guru Bimbingan Konseling</hr></h1>
+      <h1 class="text-center text-home"><hr>Data Admin</hr></h1>
     </div>
   </div>
 </div>
@@ -81,13 +36,14 @@ Buat Data Guru Bimbingan Konseling
 <form action="{{ route('head') }}" method="post">
   <input type="number" name="nip" class="form-control update" placeholder="NIP">
   <input type="text" name="nama" class="form-control update" placeholder="Nama">
+  <input type="text" name="username" class="form-control update" placeholder="Username">
   <input type="password" name="password" class="form-control update" placeholder="Password">
   <select class="form-control update" name="jen_kel">
     <option class="form-control">Pria</option>
     <option class="form-control">Wanita</option>
   </select>
-  <input type="hidden" name="type_guru" class="form-control update" value="Guru Bimbingan Konseling">
-  <input type="text" name="mapel" class="form-control update" value="Bimbingan Konseling">
+  <input type="hidden" name="type_guru" class="form-control update" value="Staff IT">
+  <input type="text" name="mapel" class="form-control update" value=" - ">
   <input type="hidden" name="level" class="form-control update" value="Admin">
 
 @endsection
@@ -137,7 +93,7 @@ Buat Data Guru Bimbingan Konseling
   <tr>
     <td colspan="10">
     <center>
-    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Data Guru Konseling</button>
+    <button type="button" class="btn btn-primary button-modal" data-toggle="modal" data-target="#myModal">Buat Admin</button>
     </center>
     </td>
   <tr>

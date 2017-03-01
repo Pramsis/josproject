@@ -26,6 +26,7 @@ class GuruController extends Controller
     $this->validate($request,[
       'nip' => 'required',
       'nama' => 'required',
+      'username' => 'required',
       'password' => 'required|min:6',
       'jen_kel' => 'required',
       'type_guru' => 'required',
@@ -39,6 +40,7 @@ class GuruController extends Controller
     $Masterguru = new Masterguru;
     $Masterguru->nip = $request->nip;
     $Masterguru->nama = $request->nama;
+    $Masterguru->username = $request->username;
     $Masterguru->password = bcrypt($request->password);
     $Masterguru->jen_kel = $request->jen_kel;
     $Masterguru->type_guru = $request->type_guru;
@@ -60,10 +62,16 @@ class GuruController extends Controller
     return view('jos/guru/crudproductive', ['Mastergurus' => $Mastergurus]);
   }
 
+  public function admin()
+  {
+    $Mastergurus = Masterguru::all()->where('type_guru', 'like', 'Staff IT');
+    return view('jos/Admin/admin', ['Mastergurus' => $Mastergurus]);
+  }
+
   public function counseling()
   {
     $Mastergurus = Masterguru::all()->where('type_guru', 'like', 'Guru Bimbingan Konseling');
-    return view('jos/Admin/admin', ['Mastergurus' => $Mastergurus]);
+    return view('jos/guru/crudcounseling', ['Mastergurus' => $Mastergurus]);
   }
 
   public function editguru($id)

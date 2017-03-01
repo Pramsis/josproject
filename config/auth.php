@@ -41,12 +41,6 @@ return [
             'provider' => 'users',
         ],
 
-        'Admin' => [
-            'driver' => 'session',
-            'provider' => 'Admin',
-
-        ],
-
         'guru' => [
             'driver' => 'session',
             'provider' => 'guru',
@@ -84,11 +78,6 @@ return [
         'guru' => [
             'driver' => 'eloquent',
             'model' => App\Models\Masterguru::class,
-        ],
-
-        'Admin' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [
