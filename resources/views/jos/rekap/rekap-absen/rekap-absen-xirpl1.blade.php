@@ -16,7 +16,7 @@ class="active"
 <div class="container">
   <div class="ro">
     <div class="col-md-12">
-      <h1 class="text-center text-home">Rekap Absen Dari XI RPL 1</h1>
+      <h1 class="text-center text-home">Rekap Absensi Dari XI RPL 1</h1>
     </div>
   </div>
 </div>
@@ -24,12 +24,12 @@ class="active"
 
 @section('table')
  <thead>
-          <th class="text-center">#</th>
-          <th class="text-center">NISN</th>
-          <th class="text-center">Nama</th>
-          <th class="text-center">Kelas</th>
-          <th class="text-center">Status</th>
-          <th class="text-center">Datang Pada</th>
+          <th>#</th>
+          <th>NISN</th>
+          <th>Nama</th>
+          <th>Kelas</th>
+          <th>Status</th>
+          <th>Datang Pada</th>
         </thead>
 
 

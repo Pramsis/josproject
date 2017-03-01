@@ -62,7 +62,7 @@ Buat Data Kepala Jurusan
   <th>Jenis Kelamin</th>
   <th>Tipe Guru</th>
   <th>Mata Pelajaran</th>
-  <th>Action</th>
+  <th>Aksi</th>
 </tr>
 
 <?php $no=1; ?>

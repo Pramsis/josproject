@@ -66,7 +66,8 @@ class JosController extends Controller
     public function xrpl1()
     {
 
-      $Mastersiswas = Mastersiswa::orderBy('nisn')->where('kelas', 'like', 'X RPL 1')->get();
+      $Mastersiswas = Mastersiswa::with(['Absen'])->orderBy('nisn')->where('kelas', 'like', 'X RPL 1')->get();
+      // dd($Mastersiswas[1]->Absen()->first());
       $Absens = Absen::all()->where('kelas', 'like', 'X RPL 1');
       return view('jos/siswa/xrpl1', ['Mastersiswas' => $Mastersiswas, 'Absens' => $Absens]);
     }

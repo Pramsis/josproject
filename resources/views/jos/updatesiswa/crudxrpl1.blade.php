@@ -69,7 +69,7 @@ Buat Data Baru Di Table X RPL 1
   <th>Alamat</th>
   <th>Telepon</th>
   <th>Agama</th>
-  <th>Action</th>
+  <th>Aksi</th>
 </tr>
 
 <?php $no=1; ?>

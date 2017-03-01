@@ -39,7 +39,7 @@ Isi Jurnal Di Kelas XII RPL 2
 <form action="{{ route('jurnal.xiirpl1') }}" method="post">
   <input type="hidden" id="myDate" name="date" class="form-control">
   <input type="hidden" name="kelas" class="form-control update" value="XII RPL 1">
-  <input type="text" name="todo" class="form-control input-lg update" placeholder="Kamu Mau Isi Apa Hari Ini {{ Auth::guard('guru')->user()->nama}} ?">
+  <input type="text" name="todo" class="form-control input-lg update" placeholder="Kamu Mau Isi Apa Hari Ini ?">
   <input type="hidden" name="nama_guru" class="form-control update" value="{{ Auth::guard('guru')->user()->nama }}">
 @endsection
 

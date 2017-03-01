@@ -9,10 +9,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Mastersiswa extends Authenticatable
 {
 
-  public function Absen()
-  {
-        return $this->hasOne('App\Models\Absen', 'id_siswa');
-  }
 
   use Notifiable;
 
@@ -32,4 +28,8 @@ class Mastersiswa extends Authenticatable
 
   ];
 
+  public function Absen()
+  {
+        return $this->hasOne('App\Models\Absen','id_siswa', 'id_siswa');
+  }
 }

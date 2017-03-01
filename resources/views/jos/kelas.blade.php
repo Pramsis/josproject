@@ -31,7 +31,7 @@ class="active"
         <div class="caption">
           <h1>X RPL 1</h1>
           <h5 class="text">Model pendidikan kejuruan merupakan salah satu system pendidikan/edukasi yang dewasa ini sedang digalakkan. Pada model pendidikan kejuruan khususnya Sekolah Menengah Kejuruan dalam system pendidikannya banyak menitik beratkan pada training khusus yang unggul untuk profesi dan keahlian. Menginggat adanya keunggulan untuk profesi dan keahlian maka perlu adanya aspek kompetensi, prinsip lingkage and matching (jaringan dan aplikasi) harus dikembangkan. Paradigma pendidikan harus mulai berubah dari supply minded (orientasi jumlah) menjadi demand minded (kebutuhan) kedunia kerja.</h5>
-          <a href="{{ route('class.xrpl1') }}" class="btn btn-primary">See Now</a>
+          <a href="{{ route('class.xrpl1') }}" class="btn btn-primary">Lihat</a>
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@ class="active"
         <div class="caption">
           <h1>XI RPL 1</h1>
           <h5 class="text">Model pendidikan kejuruan merupakan salah satu system pendidikan/edukasi yang dewasa ini sedang digalakkan. Pada model pendidikan kejuruan khususnya Sekolah Menengah Kejuruan dalam system pendidikannya banyak menitik beratkan pada training khusus yang unggul untuk profesi dan keahlian. Menginggat adanya keunggulan untuk profesi dan keahlian maka perlu adanya aspek kompetensi, prinsip lingkage and matching (jaringan dan aplikasi) harus dikembangkan. Paradigma pendidikan harus mulai berubah dari supply minded (orientasi jumlah) menjadi demand minded (kebutuhan) kedunia kerja.</h5>
-          <a href="{{ route('class.xirpl1') }}" class="btn btn-primary">See Now</a>
+          <a href="{{ route('class.xirpl1') }}" class="btn btn-primary">SLihat</a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ class="active"
         <div class="caption">
           <h1>XII RPL 1</h1>
           <h5 class="text">Model pendidikan kejuruan merupakan salah satu system pendidikan/edukasi yang dewasa ini sedang digalakkan. Pada model pendidikan kejuruan khususnya Sekolah Menengah Kejuruan dalam system pendidikannya banyak menitik beratkan pada training khusus yang unggul untuk profesi dan keahlian. Menginggat adanya keunggulan untuk profesi dan keahlian maka perlu adanya aspek kompetensi, prinsip lingkage and matching (jaringan dan aplikasi) harus dikembangkan. Paradigma pendidikan harus mulai berubah dari supply minded (orientasi jumlah) menjadi demand minded (kebutuhan) kedunia kerja.</h5>
-          <a href="{{ route('class.xiirpl1') }}" class="btn btn-primary">See Now</a>
+          <a href="{{ route('class.xiirpl1') }}" class="btn btn-primary">Lihat</a>
         </div>
       </div>
     </div>

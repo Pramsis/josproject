@@ -69,7 +69,7 @@ Buat Data Siswa Baru Di Tabel XII RPL 1
   <th>Alamat</th>
   <th>Telepon</th>
   <th>Agama</th>
-  <td>Action</td>
+  <td>Aksi</td>
 </tr>
 
 <?php $no=1; ?>
